@@ -7,17 +7,34 @@ import os
 # Load trained model
 @st.cache_resource
 def load_model():
+    # Get current working directory for debugging
+    current_dir = os.getcwd()
+    st.sidebar.write(f"Current directory: {current_dir}")
+    
+    # List all files in current directory for debugging
+    try:
+        files_in_dir = os.listdir('.')
+        st.sidebar.write(f"Files in current directory: {files_in_dir}")
+    except:
+        st.sidebar.write("Could not list files in current directory")
+    
     # Try different possible paths for the model
     possible_paths = [
         'mnist_model.h5',  # Local path when running from streamlit_app directory
-        'task2_deep_learning/streamlit_app/mnist_model.h5',  # Streamlit Cloud path
         './mnist_model.h5',  # Current directory
-        '../mnist_model.h5'  # Alternative local path
+        'task2_deep_learning/streamlit_app/mnist_model.h5',  # Streamlit Cloud path
+        '../mnist_model.h5',  # Alternative local path
+        os.path.join(os.getcwd(), 'mnist_model.h5'),  # Absolute path
+        os.path.join(os.path.dirname(__file__), 'mnist_model.h5')  # Same directory as script
     ]
     
+    st.sidebar.write("Trying to find model file...")
+    
     for model_path in possible_paths:
+        st.sidebar.write(f"Checking: {model_path}")
         if os.path.exists(model_path):
             try:
+                st.sidebar.write(f"Found model at: {model_path}")
                 model = tf.keras.models.load_model(model_path, compile=False)
                 # Display model info for debugging
                 st.sidebar.success(f"Model loaded from: {model_path}")
@@ -27,6 +44,8 @@ def load_model():
             except Exception as e:
                 st.sidebar.error(f"Error loading model from {model_path}: {str(e)}")
                 continue
+        else:
+            st.sidebar.write(f"Not found: {model_path}")
     
     # If no path works, show error with all attempted paths
     st.error(f"Model file not found. Tried paths: {possible_paths}")
