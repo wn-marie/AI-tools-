@@ -7,17 +7,6 @@ import os
 # Load trained model
 @st.cache_resource
 def load_model():
-    # Get current working directory for debugging
-    current_dir = os.getcwd()
-    st.sidebar.write(f"Current directory: {current_dir}")
-    
-    # List all files in current directory for debugging
-    try:
-        files_in_dir = os.listdir('.')
-        st.sidebar.write(f"Files in current directory: {files_in_dir}")
-    except:
-        st.sidebar.write("Could not list files in current directory")
-    
     # Try different possible paths for the model
     possible_paths = [
         'mnist_model.h5',  # Local path when running from streamlit_app directory
@@ -28,26 +17,35 @@ def load_model():
         os.path.join(os.path.dirname(__file__), 'mnist_model.h5')  # Same directory as script
     ]
     
-    st.sidebar.write("Trying to find model file...")
-    
     for model_path in possible_paths:
-        st.sidebar.write(f"Checking: {model_path}")
         if os.path.exists(model_path):
             try:
-                st.sidebar.write(f"Found model at: {model_path}")
                 model = tf.keras.models.load_model(model_path, compile=False)
-                # Display model info for debugging
-                st.sidebar.success(f"Model loaded from: {model_path}")
-                st.sidebar.write(f"Model input shape: {model.input_shape}")
-                st.sidebar.write(f"Model output shape: {model.output_shape}")
+                # Only show success message in sidebar for cloud debugging
+                st.sidebar.success(f"✅ Model loaded from: {model_path}")
                 return model
             except Exception as e:
-                st.sidebar.error(f"Error loading model from {model_path}: {str(e)}")
+                # Only show errors in sidebar for debugging
+                st.sidebar.error(f"❌ Error loading model from {model_path}: {str(e)}")
                 continue
-        else:
-            st.sidebar.write(f"Not found: {model_path}")
     
-    # If no path works, show error with all attempted paths
+    # If no path works, show detailed debugging info
+    current_dir = os.getcwd()
+    st.sidebar.error("🔍 DEBUGGING INFO:")
+    st.sidebar.write(f"Current directory: {current_dir}")
+    
+    try:
+        files_in_dir = os.listdir('.')
+        st.sidebar.write(f"Files in directory: {files_in_dir}")
+    except:
+        st.sidebar.write("Could not list files in current directory")
+    
+    st.sidebar.write("Tried paths:")
+    for i, path in enumerate(possible_paths, 1):
+        exists = "✅" if os.path.exists(path) else "❌"
+        st.sidebar.write(f"{i}. {exists} {path}")
+    
+    # Show error in main area
     st.error(f"Model file not found. Tried paths: {possible_paths}")
     st.error("Please ensure the mnist_model.h5 file is in the same directory as app.py")
     return None
