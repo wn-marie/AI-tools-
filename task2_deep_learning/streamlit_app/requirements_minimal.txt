@@ -1,0 +1,5 @@
+# Minimal requirements - most compatible with Streamlit Cloud
+streamlit
+tensorflow
+numpy
+Pillow
