@@ -8,13 +8,14 @@
 4. **Configure Deployment**:
    - **Main file path**: `task2_deep_learning/streamlit_app/app.py`
    - **Branch**: `main`
-   - **Python version**: 3.9 (default)
+   - **Python version**: 3.11 (specified in runtime.txt)
 
 ## Files Included for Deployment
 
 - `app.py` - Main Streamlit application
 - `mnist_model.h5` - Trained TensorFlow model (2.7 MB)
 - `requirements.txt` - Python dependencies with specific versions
+- `runtime.txt` - Python version specification (3.11)
 - `.streamlit/config.toml` - Streamlit configuration
 - `packages.txt` - System dependencies (empty for this app)
 
