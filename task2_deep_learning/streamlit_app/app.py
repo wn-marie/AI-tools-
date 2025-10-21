@@ -11,13 +11,14 @@ def load_model():
     possible_paths = [
         'mnist_model.h5',  # Local path when running from streamlit_app directory
         'task2_deep_learning/streamlit_app/mnist_model.h5',  # Streamlit Cloud path
+        './mnist_model.h5',  # Current directory
         '../mnist_model.h5'  # Alternative local path
     ]
     
     for model_path in possible_paths:
         if os.path.exists(model_path):
             try:
-                model = tf.keras.models.load_model(model_path)
+                model = tf.keras.models.load_model(model_path, compile=False)
                 # Display model info for debugging
                 st.sidebar.success(f"Model loaded from: {model_path}")
                 st.sidebar.write(f"Model input shape: {model.input_shape}")
@@ -29,6 +30,7 @@ def load_model():
     
     # If no path works, show error with all attempted paths
     st.error(f"Model file not found. Tried paths: {possible_paths}")
+    st.error("Please ensure the mnist_model.h5 file is in the same directory as app.py")
     return None
 
 model = load_model()
