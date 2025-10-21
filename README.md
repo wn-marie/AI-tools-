@@ -43,6 +43,7 @@ AI-tools-practical/
 │   ├── iris_decision_tree.png
 │   ├── mnist_colab.png
 │   ├── streamlit_app.png
+│   ├── streamlit_app_result_example.png
 │   ├── amazon_reviews_spaCy.png
 │   ├── buggy_tensorflow_code.png
 │   └── fixed_tensorflow_code.png
@@ -79,6 +80,7 @@ AI-tools-practical/
 
 ![MNIST Colab](screenshots/mnist_colab.png)
 ![Streamlit App](screenshots/streamlit_app.png)
+![Streamlit _Examplr_](screenshots/streamlit_app_result_example.png)
 
 ### Task 3: NLP - Amazon Reviews Analysis
 **File:** `task3_nlp/amazon_reviews_spacy.ipynb`
@@ -121,6 +123,9 @@ AI-tools-practical/
 
 ![Streamlit Web App](screenshots/streamlit_app.png)
 *Live Streamlit web application for digit classification with upload interface and prediction visualization.*
+
+![Streamlit Web App Result Example](screenshots/streamlit_app_result_example.png)
+*Live Streamlit web application example for digit classification .*
 
 ### Task 3: NLP Analysis
 ![Amazon Reviews Analysis](screenshots/amazon_reviews_spaCy.png)
@@ -198,7 +203,7 @@ AI-tools-practical/
 
 ## 🌐 Live Demo
 
-**MNIST Digit Classifier Web App:** [Streamlit Cloud Deployment](https://mnist-digit-classifier.streamlit.app/)
+**MNIST Digit Classifier Web App:** [Streamlit Cloud Deployment]()
 
 *Upload a 28x28 grayscale image of a handwritten digit and get instant classification results with confidence scores.*
 
@@ -237,6 +242,10 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Group members:
 
 Mary Wairimu
+Fred Kaloki
+Rivaldo Ouma
+Kelvin Karani
+Odii Chinenye Gift
 
 ---
 
