@@ -132,6 +132,8 @@ dmypy.json
 # Model files
 *.h5
 *.hdf5
+# Exception: Allow the MNIST model for Streamlit deployment
+!task2_deep_learning/streamlit_app/mnist_model.h5
 *.pkl
 *.pickle
 *.joblib
