@@ -11,6 +11,9 @@ A comprehensive collection of AI and machine learning projects demonstrating var
 - [Technologies Used](#-technologies-used)
 - [Getting Started](#-getting-started)
 - [Live Demo](#-live-demo)
+- [Video Link](#-video-link)
+- [Report](#-report)
+- [Group Members](#-group-members)
 - [Contributing](#-contributing)
 
 ## 🎯 Project Overview
@@ -47,6 +50,7 @@ AI-tools-practical/
 │   ├── amazon_reviews_spaCy.png
 │   ├── buggy_tensorflow_code.png
 │   └── fixed_tensorflow_code.png
+└── report
 └── README.md                            # This file
 ```
 
@@ -203,9 +207,13 @@ AI-tools-practical/
 
 ## 🌐 Live Demo
 
-**MNIST Digit Classifier Web App:** [Streamlit Cloud Deployment]()
+**MNIST Digit Classifier Web App:** [Streamlit Cloud Deployment](https://mnist-digits-classifier.streamlit.app)
 
 *Upload a 28x28 grayscale image of a handwritten digit and get instant classification results with confidence scores.*
+
+## 🎬 Video link
+
+**Video Walkthrough:** [https://drive.google.com/file/d/1qiL4Id_oC5t0_e3OXeVBN2ZdhqYUDqEE/view?usp=drive_link] 
 
 ## 📊 Key Features
 
@@ -227,6 +235,16 @@ This project demonstrates:
 5. **Debugging:** Code optimization and performance improvement
 6. **Best Practices:** Clean code, documentation, and version control
 
+## 🦾Group Members:
+
+```
+Mary Wairimu
+Fred Kaloki
+Rivaldo Ouma
+Kelvin Karani
+Odii Chinenye Gift
+```
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -239,13 +257,7 @@ This project demonstrates:
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## Group members:
 
-Mary Wairimu
-Fred Kaloki
-Rivaldo Ouma
-Kelvin Karani
-Odii Chinenye Gift
 
 ---
 
