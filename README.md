@@ -5,6 +5,8 @@ A comprehensive collection of AI and machine learning projects demonstrating var
 ## 📋 Table of Contents
 
 - [Project Overview](#-project-overview)
+- [Group Members](#-group-members)
+- [Project Report](#-project-report)
 - [Project Structure](#-project-structure)
 - [Tasks Overview](#-tasks-overview)
 - [Screenshots](#-screenshots)
@@ -12,8 +14,6 @@ A comprehensive collection of AI and machine learning projects demonstrating var
 - [Getting Started](#-getting-started)
 - [Live Demo](#-live-demo)
 - [Video Link](#-video-link)
-- [Report](#-report)
-- [Group Members](#-group-members)
 - [Contributing](#-contributing)
 
 ## 🎯 Project Overview
@@ -24,6 +24,31 @@ This repository contains four main AI/ML tasks that showcase different aspects o
 2. **Deep Learning** - MNIST digit classification with TensorFlow/Keras and Streamlit deployment
 3. **Natural Language Processing** - Amazon reviews analysis using spaCy
 4. **Debugging** - TensorFlow code debugging and optimization
+
+## 👥 Group Members
+
+This project was developed by the following team members:
+
+- **Team Member 1** - [Mary Wairimu]
+- **Team Member 2** - [Fred Kaloki]
+- **Team Member 3** - [Odii Chinenye Gift]
+- **Team Member 4** - [Rivaldo Ouma]
+- **Team Member 4** - [Kelvin Karani]
+
+*Please update this section with the actual group member names and their contributions to the project.*
+
+## 📄 Project Report
+
+A comprehensive project report is available in PDF format:
+
+📊 **[REPORT.pdf](REPORT.pdf)** - Complete project documentation including:
+- Detailed methodology for each task
+- Results analysis and performance metrics
+- Technical implementation details
+- Challenges faced and solutions implemented
+- Future improvements and recommendations
+
+The report provides in-depth analysis of all four AI/ML tasks and serves as the primary documentation for this project.
 
 ## 📁 Project Structure
 
@@ -50,7 +75,6 @@ AI-tools-practical/
 │   ├── amazon_reviews_spaCy.png
 │   ├── buggy_tensorflow_code.png
 │   └── fixed_tensorflow_code.png
-└── report
 └── README.md                            # This file
 ```
 
@@ -235,15 +259,6 @@ This project demonstrates:
 5. **Debugging:** Code optimization and performance improvement
 6. **Best Practices:** Clean code, documentation, and version control
 
-## 🦾Group Members:
-
-```
-Mary Wairimu
-Fred Kaloki
-Rivaldo Ouma
-Kelvin Karani
-Odii Chinenye Gift
-```
 
 ## 🤝 Contributing
 
